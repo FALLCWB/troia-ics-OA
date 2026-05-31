@@ -1,0 +1,31 @@
+# Copy to bench.config and source before running scripts.
+# Example: cp bench.config.example bench.config && set -a; source bench.config; set +a
+
+# Network
+TROIA_SUBNET=172.30.0.0/24
+PLC_IP=172.30.0.10
+HMI_IP=172.30.0.20
+ATTACKER_IP=172.30.0.30
+MONITOR_IP=172.30.0.40
+
+# OpenPLC
+PLC_MODBUS_PORT=502
+PLC_WEB_PORT=8080
+PLC_WEB_USER=openplc
+PLC_WEB_PASS=openplc
+
+# ScadaBR
+HMI_WEB_PORT=8081
+HMI_ADMIN_USER=admin
+HMI_ADMIN_PASS=admin
+
+# Monitor
+DUMP_INTERVAL_SEC=1.0
+LOF_WARMUP_SEC=300
+LOF_N_NEIGHBORS=20
+
+# Experiment run
+AVALIACAO_DIR=./avaliacao
+SCENARIO=baseline
+CONFIG=single-plc
+ITERATIONS=10

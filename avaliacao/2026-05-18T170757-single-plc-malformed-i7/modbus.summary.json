@@ -1,0 +1,14 @@
+{
+  "total_pdus": 10583,
+  "malformed": 19,
+  "unknown_fc": 12,
+  "exceptions": 6,
+  "fc_histogram": {
+    "0x03": 5278,
+    "0x01": 5264,
+    "0x10": 4,
+    "0x63": 4,
+    "0x06": 20,
+    "0x7f": 8
+  }
+}

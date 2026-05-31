@@ -1,0 +1,5 @@
+scenario,n,f1_mean,f1_std,precision_mean,recall_mean,fpr_mean
+baseline,14,0.0,0.0,0.0,0.0,0.0028
+malformed,10,0.7324,0.1147,0.8343,0.6844,0.1846
+mutate,10,0.0,0.0,0.0,0.0,0.0
+replay,11,0.2335,0.0955,0.5152,0.1559,0.028

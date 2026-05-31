@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Experiment outputs — ignore per-run directories entirely; keep only
+# aggregated/summary files at avaliacao/ root (results.csv, killer_demo_summary.json, etc.)
+avaliacao/*/
+avaliacao/_smoke/
+avaliacao/_plots/
+
+# Docker
+.docker/
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Local env
+.env
+bench.env
+bench.config
+*.local
+
+# OS
+Thumbs.db

@@ -1,0 +1,21 @@
+# redundant-hmi overlay: adds a second HMI (hmi2) polling the same PLC.
+# Used to study integrity detection under concurrent reads/writes.
+services:
+  hmi2:
+    build:
+      context: ../containers/hmi
+    container_name: troia-hmi2
+    hostname: hmi2
+    networks:
+      troia-net:
+        ipv4_address: 172.30.0.21
+    ports:
+      - "8082:8080"
+    depends_on:
+      plc:
+        condition: service_healthy
+    restart: unless-stopped
+
+  plc:
+    environment:
+      - CONFIG_NAME=redundant-hmi

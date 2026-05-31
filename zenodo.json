@@ -1,0 +1,35 @@
+{
+  "title": "troia-ics: Provocation Testing for Dormant Supply-Chain Triggers in Industrial Control Systems — code and dataset",
+  "description": "Code, container definitions, and full experimental record (40 main runs + 40 killer-demo runs) accompanying the IEEE Access manuscript 'Pre-Deployment Provocation of Dormant Supply-Chain Triggers in Industrial Control Systems'. Includes OpenPLC v3 program with hidden contextual trigger, four observability-channel collectors, Isolation Forest and rule-based (2-sigma, 3-sigma) detectors, pre-registered killer-demo analysis pipeline, and all aggregated CSV summaries.",
+  "creators": [
+    {"name": "Lemos, Filipe Augusto da Luz", "affiliation": "Forensic and National Security Sciences Institute, Syracuse University; Instituto Militar de Engenharia", "orcid": "0000-0002-5209-119X"},
+    {"name": "Priotto, Felipe Messias", "affiliation": "Instituto Militar de Engenharia"},
+    {"name": "Oroski, Elder", "affiliation": "Universidade Tecnológica Federal do Paraná"},
+    {"name": "Faria, Rubens Alexandre de", "affiliation": "Syracuse University; Universidade Tecnológica Federal do Paraná"},
+    {"name": "Pellanda, Paulo César", "affiliation": "Instituto Militar de Engenharia"}
+  ],
+  "keywords": [
+    "industrial control systems",
+    "supply chain security",
+    "dormant trigger activation",
+    "pre-deployment provocation",
+    "container-based emulation",
+    "multi-channel observability",
+    "anomaly detection",
+    "isolation forest",
+    "modbus TCP",
+    "openplc",
+    "scada-lts",
+    "critical infrastructure protection",
+    "hardware trojans",
+    "reproducible research"
+  ],
+  "license": {"code": "Apache-2.0", "data": "CC-BY-4.0"},
+  "related_identifiers": [
+    {"identifier": "https://github.com/FALLCWB/troia-ics-OA", "relation": "isSupplementTo", "resource_type": "software"}
+  ],
+  "communities": ["ieee-access"],
+  "language": "eng",
+  "access_right": "open",
+  "upload_type": "dataset"
+}

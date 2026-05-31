@@ -1,0 +1,10 @@
+numpy==1.26.4
+scikit-learn==1.5.0
+scapy==2.5.0
+pymodbus==3.6.9
+psutil==5.9.8
+docker==7.1.0
+requests==2.32.3
+filelock==3.13.4
+pydantic==2.6.4
+matplotlib==3.8.4

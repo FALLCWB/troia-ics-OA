@@ -1,0 +1,7 @@
+{"ts_ns": 1779130670512819474, "kind": "replay_capture_start", "scenario": "replay", "target": "plc:502", "capture_sec": 30}
+{"ts_ns": 1779130697459539985, "kind": "replay_capture_end", "scenario": "replay", "pcap": "/tmp/troia_replay.pcap"}
+{"ts_ns": 1779130697698303323, "kind": "replay_pdu", "scenario": "replay", "fc": 6, "mutated": true}
+{"ts_ns": 1779130706761327374, "kind": "replay_pdu", "scenario": "replay", "fc": 6, "mutated": true}
+{"ts_ns": 1779130713338650143, "kind": "replay_pdu", "scenario": "replay", "fc": 6, "mutated": true}
+{"ts_ns": 1779130722364997397, "kind": "replay_pdu", "scenario": "replay", "fc": 6, "mutated": true}
+{"ts_ns": 1779130731367153165, "kind": "replay_end", "scenario": "replay", "replayed": 4}

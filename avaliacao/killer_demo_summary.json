@@ -1,0 +1,315 @@
+{
+  "preregistration": "analysis/killer_demo_preregistration.md",
+  "alpha": 0.05,
+  "test": "two-proportion z-test, two-tailed",
+  "arms": {
+    "provoke_off": {
+      "n": 20,
+      "manifested": 0,
+      "p_hat": 0.0,
+      "wilson_95ci": [
+        0.0,
+        0.1611
+      ]
+    },
+    "provoke_on": {
+      "n": 20,
+      "manifested": 20,
+      "p_hat": 1.0,
+      "wilson_95ci": [
+        0.8389,
+        1.0
+      ],
+      "median_manifestation_latency_sec": 0.57
+    }
+  },
+  "z_stat": 6.3246,
+  "p_value": 2.539628589470881e-10,
+  "reject_h0": true,
+  "raw_runs": {
+    "provoke_off": [
+      {
+        "run_id": "2026-05-18T223831-single-plc-provoke_off-i1",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779144025938902685
+      },
+      {
+        "run_id": "2026-05-18T224344-single-plc-provoke_off-i2",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779144337770766778
+      },
+      {
+        "run_id": "2026-05-18T224857-single-plc-provoke_off-i3",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779144650711247503
+      },
+      {
+        "run_id": "2026-05-18T225410-single-plc-provoke_off-i4",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779144963281768712
+      },
+      {
+        "run_id": "2026-05-18T225924-single-plc-provoke_off-i5",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779145277164118123
+      },
+      {
+        "run_id": "2026-05-18T230435-single-plc-provoke_off-i6",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779145588860612949
+      },
+      {
+        "run_id": "2026-05-18T230949-single-plc-provoke_off-i7",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779145902964517017
+      },
+      {
+        "run_id": "2026-05-18T231500-single-plc-provoke_off-i8",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779146215604115834
+      },
+      {
+        "run_id": "2026-05-18T232013-single-plc-provoke_off-i9",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779146526619225084
+      },
+      {
+        "run_id": "2026-05-18T232526-single-plc-provoke_off-i10",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779146839234202367
+      },
+      {
+        "run_id": "2026-05-18T233037-single-plc-provoke_off-i11",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779147153650044794
+      },
+      {
+        "run_id": "2026-05-18T233551-single-plc-provoke_off-i12",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779147465743099794
+      },
+      {
+        "run_id": "2026-05-18T234106-single-plc-provoke_off-i13",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779147779907172671
+      },
+      {
+        "run_id": "2026-05-18T234619-single-plc-provoke_off-i14",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779148092822297499
+      },
+      {
+        "run_id": "2026-05-18T235131-single-plc-provoke_off-i15",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779148407045921600
+      },
+      {
+        "run_id": "2026-05-18T235644-single-plc-provoke_off-i16",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779148719259580765
+      },
+      {
+        "run_id": "2026-05-19T000156-single-plc-provoke_off-i17",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779149027252172777
+      },
+      {
+        "run_id": "2026-05-19T000704-single-plc-provoke_off-i18",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779149339740015463
+      },
+      {
+        "run_id": "2026-05-19T001217-single-plc-provoke_off-i19",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779149650938535516
+      },
+      {
+        "run_id": "2026-05-19T001729-single-plc-provoke_off-i20",
+        "manifested": false,
+        "trigger_fired_max": 0,
+        "trigger_fired_first_ts_ns": 0,
+        "run_start_ns": 1779149965485166957
+      }
+    ],
+    "provoke_on": [
+      {
+        "run_id": "2026-05-19T002243-single-plc-provoke_on-i1",
+        "manifested": true,
+        "trigger_fired_max": 1875,
+        "trigger_fired_first_ts_ns": 1779150277708864817,
+        "run_start_ns": 1779150277199151590
+      },
+      {
+        "run_id": "2026-05-19T002812-single-plc-provoke_on-i2",
+        "manifested": true,
+        "trigger_fired_max": 1874,
+        "trigger_fired_first_ts_ns": 1779150605421775650,
+        "run_start_ns": 1779150604785570577
+      },
+      {
+        "run_id": "2026-05-19T003339-single-plc-provoke_on-i3",
+        "manifested": true,
+        "trigger_fired_max": 1872,
+        "trigger_fired_first_ts_ns": 1779150933563868132,
+        "run_start_ns": 1779150932996412478
+      },
+      {
+        "run_id": "2026-05-19T003907-single-plc-provoke_on-i4",
+        "manifested": true,
+        "trigger_fired_max": 1874,
+        "trigger_fired_first_ts_ns": 1779151261101162922,
+        "run_start_ns": 1779151260494473267
+      },
+      {
+        "run_id": "2026-05-19T004435-single-plc-provoke_on-i5",
+        "manifested": true,
+        "trigger_fired_max": 1872,
+        "trigger_fired_first_ts_ns": 1779151588977223310,
+        "run_start_ns": 1779151588398833789
+      },
+      {
+        "run_id": "2026-05-19T005002-single-plc-provoke_on-i6",
+        "manifested": true,
+        "trigger_fired_max": 1872,
+        "trigger_fired_first_ts_ns": 1779151916851555842,
+        "run_start_ns": 1779151916234319070
+      },
+      {
+        "run_id": "2026-05-19T005532-single-plc-provoke_on-i7",
+        "manifested": true,
+        "trigger_fired_max": 1869,
+        "trigger_fired_first_ts_ns": 1779152247866837511,
+        "run_start_ns": 1779152247260098889
+      },
+      {
+        "run_id": "2026-05-19T010104-single-plc-provoke_on-i8",
+        "manifested": true,
+        "trigger_fired_max": 1870,
+        "trigger_fired_first_ts_ns": 1779152579301403030,
+        "run_start_ns": 1779152578797403195
+      },
+      {
+        "run_id": "2026-05-19T010633-single-plc-provoke_on-i9",
+        "manifested": true,
+        "trigger_fired_max": 1873,
+        "trigger_fired_first_ts_ns": 1779152907739862912,
+        "run_start_ns": 1779152907220433269
+      },
+      {
+        "run_id": "2026-05-19T011202-single-plc-provoke_on-i10",
+        "manifested": true,
+        "trigger_fired_max": 1872,
+        "trigger_fired_first_ts_ns": 1779153236466408229,
+        "run_start_ns": 1779153235869631074
+      },
+      {
+        "run_id": "2026-05-19T011729-single-plc-provoke_on-i11",
+        "manifested": true,
+        "trigger_fired_max": 1874,
+        "trigger_fired_first_ts_ns": 1779153563336874322,
+        "run_start_ns": 1779153562781545503
+      },
+      {
+        "run_id": "2026-05-19T012256-single-plc-provoke_on-i12",
+        "manifested": true,
+        "trigger_fired_max": 1873,
+        "trigger_fired_first_ts_ns": 1779153890129121339,
+        "run_start_ns": 1779153889533267618
+      },
+      {
+        "run_id": "2026-05-19T012824-single-plc-provoke_on-i13",
+        "manifested": true,
+        "trigger_fired_max": 1873,
+        "trigger_fired_first_ts_ns": 1779154217895337816,
+        "run_start_ns": 1779154217315791729
+      },
+      {
+        "run_id": "2026-05-19T013352-single-plc-provoke_on-i14",
+        "manifested": true,
+        "trigger_fired_max": 1874,
+        "trigger_fired_first_ts_ns": 1779154545495128249,
+        "run_start_ns": 1779154545018434590
+      },
+      {
+        "run_id": "2026-05-19T013919-single-plc-provoke_on-i15",
+        "manifested": true,
+        "trigger_fired_max": 1873,
+        "trigger_fired_first_ts_ns": 1779154873399033074,
+        "run_start_ns": 1779154872848554338
+      },
+      {
+        "run_id": "2026-05-19T014448-single-plc-provoke_on-i16",
+        "manifested": true,
+        "trigger_fired_max": 1873,
+        "trigger_fired_first_ts_ns": 1779155201715466554,
+        "run_start_ns": 1779155201129738642
+      },
+      {
+        "run_id": "2026-05-19T015016-single-plc-provoke_on-i17",
+        "manifested": true,
+        "trigger_fired_max": 1871,
+        "trigger_fired_first_ts_ns": 1779155530608985037,
+        "run_start_ns": 1779155530040731183
+      },
+      {
+        "run_id": "2026-05-19T015543-single-plc-provoke_on-i18",
+        "manifested": true,
+        "trigger_fired_max": 1872,
+        "trigger_fired_first_ts_ns": 1779155858013737539,
+        "run_start_ns": 1779155857471362461
+      },
+      {
+        "run_id": "2026-05-19T020111-single-plc-provoke_on-i19",
+        "manifested": true,
+        "trigger_fired_max": 1873,
+        "trigger_fired_first_ts_ns": 1779156185127341231,
+        "run_start_ns": 1779156184547313819
+      },
+      {
+        "run_id": "2026-05-19T020639-single-plc-provoke_on-i20",
+        "manifested": true,
+        "trigger_fired_max": 1873,
+        "trigger_fired_first_ts_ns": 1779156514003188144,
+        "run_start_ns": 1779156513451416233
+      }
+    ]
+  }
+}

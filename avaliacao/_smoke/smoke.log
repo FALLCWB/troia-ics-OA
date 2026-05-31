@@ -1,0 +1,46 @@
+[smoke] step 1/5 — docker compose up -d --build
+ Image troia-ics-monitor Building 
+ Image troia-ics-plc Building 
+ Image troia-ics-hmi Building 
+ Image troia-ics-attacker Building 
+ Image troia-ics-plc Built 
+ Image troia-ics-hmi Built 
+ Image troia-ics-monitor Built 
+ Image troia-ics-attacker Built 
+ Network troia-ics_troia-net Creating 
+ Network troia-ics_troia-net Created 
+ Volume troia-ics_hmi-db-data Creating 
+ Volume troia-ics_hmi-db-data Created 
+ Volume troia-ics_plc-data Creating 
+ Volume troia-ics_plc-data Created 
+ Container troia-plc Creating 
+ Container troia-hmi-db Creating 
+ Container troia-hmi-db Created 
+ Container troia-plc Created 
+ Container troia-monitor Creating 
+ Container troia-hmi Creating 
+ Container troia-attacker Creating 
+ Container troia-attacker Created 
+ Container troia-monitor Created 
+ Container troia-hmi Created 
+ Container troia-plc Starting 
+ Container troia-hmi-db Starting 
+ Container troia-plc Started 
+ Container troia-plc Waiting 
+ Container troia-attacker Starting 
+ Container troia-hmi-db Started 
+ Container troia-hmi-db Waiting 
+ Container troia-plc Waiting 
+ Container troia-attacker Started 
+ Container troia-plc Healthy 
+ Container troia-monitor Starting 
+ Container troia-hmi-db Healthy 
+ Container troia-plc Healthy 
+ Container troia-hmi Starting 
+ Container troia-monitor Started 
+ Container troia-hmi Started 
+[smoke] step 2/5 — waiting for plc health (Modbus 502)
+[smoke] PASS: plc healthy after 1x5s
+[smoke] step 3/5 — waiting for hmi HTTP on :8081
+[smoke] FAIL: hmi never served HTTP in 120s
+[smoke] leaving stack up (--keep-up)

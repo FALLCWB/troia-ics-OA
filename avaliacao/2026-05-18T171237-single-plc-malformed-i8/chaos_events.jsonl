@@ -1,0 +1,32 @@
+{"ts_ns": 1779124434909407997, "kind": "malformed_start", "scenario": "malformed", "target": "plc:502", "count": 30}
+{"ts_ns": 1779124434946171460, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "bad_proto_id", "byte_len": 12, "seq": 0}
+{"ts_ns": 1779124441024105451, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "bad_proto_id", "byte_len": 12, "seq": 1}
+{"ts_ns": 1779124447526691429, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "truncated_header", "byte_len": 4, "seq": 2}
+{"ts_ns": 1779124451093554932, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "bad_proto_id", "byte_len": 12, "seq": 3}
+{"ts_ns": 1779124457162317205, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 4}
+{"ts_ns": 1779124463664776866, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "truncated_header", "byte_len": 4, "seq": 5}
+{"ts_ns": 1779124469703876494, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 6}
+{"ts_ns": 1779124475736614029, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 7}
+{"ts_ns": 1779124479274852771, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc99_reserved", "byte_len": 12, "seq": 8}
+{"ts_ns": 1779124485777542099, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "length_mismatch", "byte_len": 12, "seq": 9}
+{"ts_ns": 1779124491879063076, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc99_reserved", "byte_len": 12, "seq": 10}
+{"ts_ns": 1779124497935193031, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_oor_value", "byte_len": 12, "seq": 11}
+{"ts_ns": 1779124504025256457, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_negative_via_underflow", "byte_len": 12, "seq": 12}
+{"ts_ns": 1779124507637862399, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_oor_value", "byte_len": 12, "seq": 13}
+{"ts_ns": 1779124514142249419, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "truncated_header", "byte_len": 4, "seq": 14}
+{"ts_ns": 1779124520165026461, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 15}
+{"ts_ns": 1779124526257546021, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc99_reserved", "byte_len": 12, "seq": 16}
+{"ts_ns": 1779124532338518870, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc99_reserved", "byte_len": 12, "seq": 17}
+{"ts_ns": 1779124538422138629, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_negative_via_underflow", "byte_len": 12, "seq": 18}
+{"ts_ns": 1779124542454956313, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "truncated_header", "byte_len": 4, "seq": 19}
+{"ts_ns": 1779124548542051297, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc99_reserved", "byte_len": 12, "seq": 20}
+{"ts_ns": 1779124555044189966, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "length_mismatch", "byte_len": 12, "seq": 21}
+{"ts_ns": 1779124561549774720, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "length_mismatch", "byte_len": 12, "seq": 22}
+{"ts_ns": 1779124567605726574, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 23}
+{"ts_ns": 1779124571624130394, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "length_mismatch", "byte_len": 12, "seq": 24}
+{"ts_ns": 1779124577693549276, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_negative_via_underflow", "byte_len": 12, "seq": 25}
+{"ts_ns": 1779124583784749119, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_negative_via_underflow", "byte_len": 12, "seq": 26}
+{"ts_ns": 1779124589878702037, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 27}
+{"ts_ns": 1779124595953198069, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_oor_value", "byte_len": 12, "seq": 28}
+{"ts_ns": 1779124599486902482, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 29}
+{"ts_ns": 1779124605487590029, "kind": "malformed_end", "scenario": "malformed", "count": 30}

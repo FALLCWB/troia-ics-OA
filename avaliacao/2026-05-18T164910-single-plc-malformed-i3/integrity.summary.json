@@ -1,0 +1,15 @@
+{
+  "n_samples": 2632,
+  "n_missed_reads": 0,
+  "n_after_warmup": 2533,
+  "rms_deviation": 42746.084,
+  "max_abs_deviation": 65535,
+  "alarms_triggered": 18,
+  "safety_tripped": false,
+  "distinct_setpoints": [
+    500,
+    32768,
+    65535
+  ],
+  "unsafe": true
+}

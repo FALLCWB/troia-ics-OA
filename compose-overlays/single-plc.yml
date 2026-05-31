@@ -1,0 +1,5 @@
+# single-plc overlay: default topology (1 plc, 1 hmi). No changes to base compose.
+services:
+  plc:
+    environment:
+      - CONFIG_NAME=single-plc

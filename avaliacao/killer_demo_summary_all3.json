@@ -1,0 +1,1158 @@
+{
+  "preregistration": "analysis/killer_demo_preregistration.md",
+  "alpha": 0.05,
+  "test": "two-proportion z-test, two-tailed (per trigger class)",
+  "classes": {
+    "class1_data": {
+      "class": "class1_data",
+      "treatment_scenario": "provoke_on",
+      "control_scenario": "provoke_off",
+      "arms": {
+        "provoke_off": {
+          "n": 20,
+          "manifested": 0,
+          "p_hat": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.1611
+          ]
+        },
+        "provoke_on": {
+          "n": 20,
+          "manifested": 20,
+          "p_hat": 1.0,
+          "wilson_95ci": [
+            0.8389,
+            1.0
+          ],
+          "median_manifestation_latency_sec": 0.57
+        }
+      },
+      "z_stat": 6.3246,
+      "p_value": 2.539628589470881e-10,
+      "reject_h0": true,
+      "p_fisher_exact": 1.450888910384996e-11,
+      "reject_h0_fisher": true,
+      "raw_runs": {
+        "provoke_off": [
+          {
+            "run_id": "2026-05-18T223831-single-plc-provoke_off-i1",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779144025938902685
+          },
+          {
+            "run_id": "2026-05-18T224344-single-plc-provoke_off-i2",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779144337770766778
+          },
+          {
+            "run_id": "2026-05-18T224857-single-plc-provoke_off-i3",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779144650711247503
+          },
+          {
+            "run_id": "2026-05-18T225410-single-plc-provoke_off-i4",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779144963281768712
+          },
+          {
+            "run_id": "2026-05-18T225924-single-plc-provoke_off-i5",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779145277164118123
+          },
+          {
+            "run_id": "2026-05-18T230435-single-plc-provoke_off-i6",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779145588860612949
+          },
+          {
+            "run_id": "2026-05-18T230949-single-plc-provoke_off-i7",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779145902964517017
+          },
+          {
+            "run_id": "2026-05-18T231500-single-plc-provoke_off-i8",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779146215604115834
+          },
+          {
+            "run_id": "2026-05-18T232013-single-plc-provoke_off-i9",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779146526619225084
+          },
+          {
+            "run_id": "2026-05-18T232526-single-plc-provoke_off-i10",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779146839234202367
+          },
+          {
+            "run_id": "2026-05-18T233037-single-plc-provoke_off-i11",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779147153650044794
+          },
+          {
+            "run_id": "2026-05-18T233551-single-plc-provoke_off-i12",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779147465743099794
+          },
+          {
+            "run_id": "2026-05-18T234106-single-plc-provoke_off-i13",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779147779907172671
+          },
+          {
+            "run_id": "2026-05-18T234619-single-plc-provoke_off-i14",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779148092822297499
+          },
+          {
+            "run_id": "2026-05-18T235131-single-plc-provoke_off-i15",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779148407045921600
+          },
+          {
+            "run_id": "2026-05-18T235644-single-plc-provoke_off-i16",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779148719259580765
+          },
+          {
+            "run_id": "2026-05-19T000156-single-plc-provoke_off-i17",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779149027252172777
+          },
+          {
+            "run_id": "2026-05-19T000704-single-plc-provoke_off-i18",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779149339740015463
+          },
+          {
+            "run_id": "2026-05-19T001217-single-plc-provoke_off-i19",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779149650938535516
+          },
+          {
+            "run_id": "2026-05-19T001729-single-plc-provoke_off-i20",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779149965485166957
+          }
+        ],
+        "provoke_on": [
+          {
+            "run_id": "2026-05-19T002243-single-plc-provoke_on-i1",
+            "manifested": true,
+            "trigger_max": 1875,
+            "trigger_first_ts_ns": 1779150277708864817,
+            "run_start_ns": 1779150277199151590
+          },
+          {
+            "run_id": "2026-05-19T002812-single-plc-provoke_on-i2",
+            "manifested": true,
+            "trigger_max": 1874,
+            "trigger_first_ts_ns": 1779150605421775650,
+            "run_start_ns": 1779150604785570577
+          },
+          {
+            "run_id": "2026-05-19T003339-single-plc-provoke_on-i3",
+            "manifested": true,
+            "trigger_max": 1872,
+            "trigger_first_ts_ns": 1779150933563868132,
+            "run_start_ns": 1779150932996412478
+          },
+          {
+            "run_id": "2026-05-19T003907-single-plc-provoke_on-i4",
+            "manifested": true,
+            "trigger_max": 1874,
+            "trigger_first_ts_ns": 1779151261101162922,
+            "run_start_ns": 1779151260494473267
+          },
+          {
+            "run_id": "2026-05-19T004435-single-plc-provoke_on-i5",
+            "manifested": true,
+            "trigger_max": 1872,
+            "trigger_first_ts_ns": 1779151588977223310,
+            "run_start_ns": 1779151588398833789
+          },
+          {
+            "run_id": "2026-05-19T005002-single-plc-provoke_on-i6",
+            "manifested": true,
+            "trigger_max": 1872,
+            "trigger_first_ts_ns": 1779151916851555842,
+            "run_start_ns": 1779151916234319070
+          },
+          {
+            "run_id": "2026-05-19T005532-single-plc-provoke_on-i7",
+            "manifested": true,
+            "trigger_max": 1869,
+            "trigger_first_ts_ns": 1779152247866837511,
+            "run_start_ns": 1779152247260098889
+          },
+          {
+            "run_id": "2026-05-19T010104-single-plc-provoke_on-i8",
+            "manifested": true,
+            "trigger_max": 1870,
+            "trigger_first_ts_ns": 1779152579301403030,
+            "run_start_ns": 1779152578797403195
+          },
+          {
+            "run_id": "2026-05-19T010633-single-plc-provoke_on-i9",
+            "manifested": true,
+            "trigger_max": 1873,
+            "trigger_first_ts_ns": 1779152907739862912,
+            "run_start_ns": 1779152907220433269
+          },
+          {
+            "run_id": "2026-05-19T011202-single-plc-provoke_on-i10",
+            "manifested": true,
+            "trigger_max": 1872,
+            "trigger_first_ts_ns": 1779153236466408229,
+            "run_start_ns": 1779153235869631074
+          },
+          {
+            "run_id": "2026-05-19T011729-single-plc-provoke_on-i11",
+            "manifested": true,
+            "trigger_max": 1874,
+            "trigger_first_ts_ns": 1779153563336874322,
+            "run_start_ns": 1779153562781545503
+          },
+          {
+            "run_id": "2026-05-19T012256-single-plc-provoke_on-i12",
+            "manifested": true,
+            "trigger_max": 1873,
+            "trigger_first_ts_ns": 1779153890129121339,
+            "run_start_ns": 1779153889533267618
+          },
+          {
+            "run_id": "2026-05-19T012824-single-plc-provoke_on-i13",
+            "manifested": true,
+            "trigger_max": 1873,
+            "trigger_first_ts_ns": 1779154217895337816,
+            "run_start_ns": 1779154217315791729
+          },
+          {
+            "run_id": "2026-05-19T013352-single-plc-provoke_on-i14",
+            "manifested": true,
+            "trigger_max": 1874,
+            "trigger_first_ts_ns": 1779154545495128249,
+            "run_start_ns": 1779154545018434590
+          },
+          {
+            "run_id": "2026-05-19T013919-single-plc-provoke_on-i15",
+            "manifested": true,
+            "trigger_max": 1873,
+            "trigger_first_ts_ns": 1779154873399033074,
+            "run_start_ns": 1779154872848554338
+          },
+          {
+            "run_id": "2026-05-19T014448-single-plc-provoke_on-i16",
+            "manifested": true,
+            "trigger_max": 1873,
+            "trigger_first_ts_ns": 1779155201715466554,
+            "run_start_ns": 1779155201129738642
+          },
+          {
+            "run_id": "2026-05-19T015016-single-plc-provoke_on-i17",
+            "manifested": true,
+            "trigger_max": 1871,
+            "trigger_first_ts_ns": 1779155530608985037,
+            "run_start_ns": 1779155530040731183
+          },
+          {
+            "run_id": "2026-05-19T015543-single-plc-provoke_on-i18",
+            "manifested": true,
+            "trigger_max": 1872,
+            "trigger_first_ts_ns": 1779155858013737539,
+            "run_start_ns": 1779155857471362461
+          },
+          {
+            "run_id": "2026-05-19T020111-single-plc-provoke_on-i19",
+            "manifested": true,
+            "trigger_max": 1873,
+            "trigger_first_ts_ns": 1779156185127341231,
+            "run_start_ns": 1779156184547313819
+          },
+          {
+            "run_id": "2026-05-19T020639-single-plc-provoke_on-i20",
+            "manifested": true,
+            "trigger_max": 1873,
+            "trigger_first_ts_ns": 1779156514003188144,
+            "run_start_ns": 1779156513451416233
+          }
+        ]
+      }
+    },
+    "class2_seq": {
+      "class": "class2_seq",
+      "treatment_scenario": "provoke_seq_on",
+      "control_scenario": "provoke_seq_off",
+      "arms": {
+        "provoke_seq_off": {
+          "n": 16,
+          "manifested": 0,
+          "p_hat": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.1936
+          ]
+        },
+        "provoke_seq_on": {
+          "n": 16,
+          "manifested": 16,
+          "p_hat": 1.0,
+          "wilson_95ci": [
+            0.8064,
+            1.0
+          ],
+          "median_manifestation_latency_sec": 0.6
+        }
+      },
+      "z_stat": 5.6569,
+      "p_value": 1.541725790028008e-08,
+      "reject_h0": true,
+      "p_fisher_exact": 3.327341955042009e-09,
+      "reject_h0_fisher": true,
+      "raw_runs": {
+        "provoke_seq_off": [
+          {
+            "run_id": "2026-05-19T101433-single-plc-provoke_seq_off-i1",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779185793098733482
+          },
+          {
+            "run_id": "2026-05-19T103700-single-plc-provoke_seq_off-i1",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779187139715660107
+          },
+          {
+            "run_id": "2026-05-19T104236-single-plc-provoke_seq_off-i2",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779187475538239459
+          },
+          {
+            "run_id": "2026-05-19T104811-single-plc-provoke_seq_off-i3",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779187811538190262
+          },
+          {
+            "run_id": "2026-05-19T105347-single-plc-provoke_seq_off-i4",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779188147314661657
+          },
+          {
+            "run_id": "2026-05-19T105923-single-plc-provoke_seq_off-i5",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779188483289925775
+          },
+          {
+            "run_id": "2026-05-19T110459-single-plc-provoke_seq_off-i6",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779188819074717194
+          },
+          {
+            "run_id": "2026-05-19T111035-single-plc-provoke_seq_off-i7",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779189154764230499
+          },
+          {
+            "run_id": "2026-05-19T111611-single-plc-provoke_seq_off-i8",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779189490630836451
+          },
+          {
+            "run_id": "2026-05-19T112147-single-plc-provoke_seq_off-i9",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779189826319519561
+          },
+          {
+            "run_id": "2026-05-19T112722-single-plc-provoke_seq_off-i10",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779190161883674423
+          },
+          {
+            "run_id": "2026-05-19T113258-single-plc-provoke_seq_off-i11",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779190497910767651
+          },
+          {
+            "run_id": "2026-05-19T113834-single-plc-provoke_seq_off-i12",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779190833862522267
+          },
+          {
+            "run_id": "2026-05-19T114410-single-plc-provoke_seq_off-i13",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779191169616069092
+          },
+          {
+            "run_id": "2026-05-19T114946-single-plc-provoke_seq_off-i14",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779191505677519774
+          },
+          {
+            "run_id": "2026-05-19T115522-single-plc-provoke_seq_off-i15",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779191841623736388
+          }
+        ],
+        "provoke_seq_on": [
+          {
+            "run_id": "2026-05-19T102009-single-plc-provoke_seq_on-i1",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779186129377705504,
+            "run_start_ns": 1779186128793362745
+          },
+          {
+            "run_id": "2026-05-19T120058-single-plc-provoke_seq_on-i1",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779192178561958144,
+            "run_start_ns": 1779192177954084701
+          },
+          {
+            "run_id": "2026-05-19T120636-single-plc-provoke_seq_on-i2",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779192516044859661,
+            "run_start_ns": 1779192515520565417
+          },
+          {
+            "run_id": "2026-05-19T121213-single-plc-provoke_seq_on-i3",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779192853677867519,
+            "run_start_ns": 1779192853073639815
+          },
+          {
+            "run_id": "2026-05-19T121751-single-plc-provoke_seq_on-i4",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779193191281508323,
+            "run_start_ns": 1779193190665600083
+          },
+          {
+            "run_id": "2026-05-19T122328-single-plc-provoke_seq_on-i5",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779193528690436763,
+            "run_start_ns": 1779193528187102738
+          },
+          {
+            "run_id": "2026-05-19T122906-single-plc-provoke_seq_on-i6",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779193866014352221,
+            "run_start_ns": 1779193865477296206
+          },
+          {
+            "run_id": "2026-05-19T123443-single-plc-provoke_seq_on-i7",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779194203805956269,
+            "run_start_ns": 1779194203197349169
+          },
+          {
+            "run_id": "2026-05-19T124021-single-plc-provoke_seq_on-i8",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779194541010010144,
+            "run_start_ns": 1779194540421411510
+          },
+          {
+            "run_id": "2026-05-19T124558-single-plc-provoke_seq_on-i9",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779194878739504255,
+            "run_start_ns": 1779194878118837378
+          },
+          {
+            "run_id": "2026-05-19T125136-single-plc-provoke_seq_on-i10",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779195216224062624,
+            "run_start_ns": 1779195215679241403
+          },
+          {
+            "run_id": "2026-05-19T125713-single-plc-provoke_seq_on-i11",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779195553694328440,
+            "run_start_ns": 1779195553093545612
+          },
+          {
+            "run_id": "2026-05-19T130251-single-plc-provoke_seq_on-i12",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779195891334020163,
+            "run_start_ns": 1779195890755925448
+          },
+          {
+            "run_id": "2026-05-19T130828-single-plc-provoke_seq_on-i13",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779196228882891481,
+            "run_start_ns": 1779196228267959867
+          },
+          {
+            "run_id": "2026-05-19T131406-single-plc-provoke_seq_on-i14",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779196566353308404,
+            "run_start_ns": 1779196565753317999
+          },
+          {
+            "run_id": "2026-05-19T131943-single-plc-provoke_seq_on-i15",
+            "manifested": true,
+            "trigger_max": 7,
+            "trigger_first_ts_ns": 1779196904210894853,
+            "run_start_ns": 1779196903614462693
+          }
+        ]
+      }
+    },
+    "class3_env": {
+      "class": "class3_env",
+      "treatment_scenario": "provoke_env_on",
+      "control_scenario": "provoke_env_off",
+      "arms": {
+        "provoke_env_off": {
+          "n": 16,
+          "manifested": 0,
+          "p_hat": 0.0,
+          "wilson_95ci": [
+            0.0,
+            0.1936
+          ]
+        },
+        "provoke_env_on": {
+          "n": 16,
+          "manifested": 16,
+          "p_hat": 1.0,
+          "wilson_95ci": [
+            0.8064,
+            1.0
+          ],
+          "median_manifestation_latency_sec": 1.98
+        }
+      },
+      "z_stat": 5.6569,
+      "p_value": 1.541725790028008e-08,
+      "reject_h0": true,
+      "p_fisher_exact": 3.327341955042009e-09,
+      "reject_h0_fisher": true,
+      "raw_runs": {
+        "provoke_env_off": [
+          {
+            "run_id": "2026-05-19T102547-single-plc-provoke_env_off-i1",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779186466540766705
+          },
+          {
+            "run_id": "2026-05-19T132521-single-plc-provoke_env_off-i1",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779197241087776584
+          },
+          {
+            "run_id": "2026-05-19T133057-single-plc-provoke_env_off-i2",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779197577451258325
+          },
+          {
+            "run_id": "2026-05-19T133633-single-plc-provoke_env_off-i3",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779197913302427177
+          },
+          {
+            "run_id": "2026-05-19T134209-single-plc-provoke_env_off-i4",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779198249087125269
+          },
+          {
+            "run_id": "2026-05-19T134745-single-plc-provoke_env_off-i5",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779198585271360500
+          },
+          {
+            "run_id": "2026-05-19T135321-single-plc-provoke_env_off-i6",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779198921043773806
+          },
+          {
+            "run_id": "2026-05-19T135857-single-plc-provoke_env_off-i7",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779199256926816356
+          },
+          {
+            "run_id": "2026-05-19T140433-single-plc-provoke_env_off-i8",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779199592908706441
+          },
+          {
+            "run_id": "2026-05-19T141009-single-plc-provoke_env_off-i9",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779199928558602079
+          },
+          {
+            "run_id": "2026-05-19T141545-single-plc-provoke_env_off-i10",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779200264646155020
+          },
+          {
+            "run_id": "2026-05-19T142121-single-plc-provoke_env_off-i11",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779200600427462843
+          },
+          {
+            "run_id": "2026-05-19T142657-single-plc-provoke_env_off-i12",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779200936454537967
+          },
+          {
+            "run_id": "2026-05-19T143233-single-plc-provoke_env_off-i13",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779201272412788627
+          },
+          {
+            "run_id": "2026-05-19T143808-single-plc-provoke_env_off-i14",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779201608069346040
+          },
+          {
+            "run_id": "2026-05-19T144344-single-plc-provoke_env_off-i15",
+            "manifested": false,
+            "trigger_max": 0,
+            "trigger_first_ts_ns": 0,
+            "run_start_ns": 1779201943723756287
+          }
+        ],
+        "provoke_env_on": [
+          {
+            "run_id": "2026-05-19T103122-single-plc-provoke_env_on-i1",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779186804163097524,
+            "run_start_ns": 1779186802162295607
+          },
+          {
+            "run_id": "2026-05-19T144920-single-plc-provoke_env_on-i1",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779202281736253167,
+            "run_start_ns": 1779202279711482459
+          },
+          {
+            "run_id": "2026-05-19T145456-single-plc-provoke_env_on-i2",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779202618022833994,
+            "run_start_ns": 1779202616046173179
+          },
+          {
+            "run_id": "2026-05-19T150032-single-plc-provoke_env_on-i3",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779202954296411968,
+            "run_start_ns": 1779202952303978686
+          },
+          {
+            "run_id": "2026-05-19T150609-single-plc-provoke_env_on-i4",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779203290667901208,
+            "run_start_ns": 1779203288639650873
+          },
+          {
+            "run_id": "2026-05-19T151145-single-plc-provoke_env_on-i5",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779203626556321892,
+            "run_start_ns": 1779203624563996166
+          },
+          {
+            "run_id": "2026-05-19T151721-single-plc-provoke_env_on-i6",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779203962800442269,
+            "run_start_ns": 1779203960854699299
+          },
+          {
+            "run_id": "2026-05-19T152257-single-plc-provoke_env_on-i7",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779204299122533124,
+            "run_start_ns": 1779204297206201227
+          },
+          {
+            "run_id": "2026-05-19T152833-single-plc-provoke_env_on-i8",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779204635182911119,
+            "run_start_ns": 1779204633256163637
+          },
+          {
+            "run_id": "2026-05-19T153410-single-plc-provoke_env_on-i9",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779204971150860219,
+            "run_start_ns": 1779204969139828724
+          },
+          {
+            "run_id": "2026-05-19T153946-single-plc-provoke_env_on-i10",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779205307842243246,
+            "run_start_ns": 1779205305841451356
+          },
+          {
+            "run_id": "2026-05-19T154522-single-plc-provoke_env_on-i11",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779205643872007572,
+            "run_start_ns": 1779205642053621849
+          },
+          {
+            "run_id": "2026-05-19T155058-single-plc-provoke_env_on-i12",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779205980583947908,
+            "run_start_ns": 1779205978598470523
+          },
+          {
+            "run_id": "2026-05-19T155635-single-plc-provoke_env_on-i13",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779206316534761864,
+            "run_start_ns": 1779206314718059566
+          },
+          {
+            "run_id": "2026-05-19T160211-single-plc-provoke_env_on-i14",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779206652600977207,
+            "run_start_ns": 1779206650689631575
+          },
+          {
+            "run_id": "2026-05-19T160747-single-plc-provoke_env_on-i15",
+            "manifested": true,
+            "trigger_max": 5,
+            "trigger_first_ts_ns": 1779206988831957085,
+            "run_start_ns": 1779206986908280423
+          }
+        ]
+      }
+    }
+  },
+  "arms": {
+    "provoke_off": {
+      "n": 20,
+      "manifested": 0,
+      "p_hat": 0.0,
+      "wilson_95ci": [
+        0.0,
+        0.1611
+      ]
+    },
+    "provoke_on": {
+      "n": 20,
+      "manifested": 20,
+      "p_hat": 1.0,
+      "wilson_95ci": [
+        0.8389,
+        1.0
+      ],
+      "median_manifestation_latency_sec": 0.57
+    }
+  },
+  "z_stat": 6.3246,
+  "p_value": 2.539628589470881e-10,
+  "reject_h0": true,
+  "p_fisher_exact": 1.450888910384996e-11,
+  "reject_h0_fisher": true,
+  "raw_runs": {
+    "provoke_off": [
+      {
+        "run_id": "2026-05-18T223831-single-plc-provoke_off-i1",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779144025938902685
+      },
+      {
+        "run_id": "2026-05-18T224344-single-plc-provoke_off-i2",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779144337770766778
+      },
+      {
+        "run_id": "2026-05-18T224857-single-plc-provoke_off-i3",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779144650711247503
+      },
+      {
+        "run_id": "2026-05-18T225410-single-plc-provoke_off-i4",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779144963281768712
+      },
+      {
+        "run_id": "2026-05-18T225924-single-plc-provoke_off-i5",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779145277164118123
+      },
+      {
+        "run_id": "2026-05-18T230435-single-plc-provoke_off-i6",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779145588860612949
+      },
+      {
+        "run_id": "2026-05-18T230949-single-plc-provoke_off-i7",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779145902964517017
+      },
+      {
+        "run_id": "2026-05-18T231500-single-plc-provoke_off-i8",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779146215604115834
+      },
+      {
+        "run_id": "2026-05-18T232013-single-plc-provoke_off-i9",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779146526619225084
+      },
+      {
+        "run_id": "2026-05-18T232526-single-plc-provoke_off-i10",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779146839234202367
+      },
+      {
+        "run_id": "2026-05-18T233037-single-plc-provoke_off-i11",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779147153650044794
+      },
+      {
+        "run_id": "2026-05-18T233551-single-plc-provoke_off-i12",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779147465743099794
+      },
+      {
+        "run_id": "2026-05-18T234106-single-plc-provoke_off-i13",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779147779907172671
+      },
+      {
+        "run_id": "2026-05-18T234619-single-plc-provoke_off-i14",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779148092822297499
+      },
+      {
+        "run_id": "2026-05-18T235131-single-plc-provoke_off-i15",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779148407045921600
+      },
+      {
+        "run_id": "2026-05-18T235644-single-plc-provoke_off-i16",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779148719259580765
+      },
+      {
+        "run_id": "2026-05-19T000156-single-plc-provoke_off-i17",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779149027252172777
+      },
+      {
+        "run_id": "2026-05-19T000704-single-plc-provoke_off-i18",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779149339740015463
+      },
+      {
+        "run_id": "2026-05-19T001217-single-plc-provoke_off-i19",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779149650938535516
+      },
+      {
+        "run_id": "2026-05-19T001729-single-plc-provoke_off-i20",
+        "manifested": false,
+        "trigger_max": 0,
+        "trigger_first_ts_ns": 0,
+        "run_start_ns": 1779149965485166957
+      }
+    ],
+    "provoke_on": [
+      {
+        "run_id": "2026-05-19T002243-single-plc-provoke_on-i1",
+        "manifested": true,
+        "trigger_max": 1875,
+        "trigger_first_ts_ns": 1779150277708864817,
+        "run_start_ns": 1779150277199151590
+      },
+      {
+        "run_id": "2026-05-19T002812-single-plc-provoke_on-i2",
+        "manifested": true,
+        "trigger_max": 1874,
+        "trigger_first_ts_ns": 1779150605421775650,
+        "run_start_ns": 1779150604785570577
+      },
+      {
+        "run_id": "2026-05-19T003339-single-plc-provoke_on-i3",
+        "manifested": true,
+        "trigger_max": 1872,
+        "trigger_first_ts_ns": 1779150933563868132,
+        "run_start_ns": 1779150932996412478
+      },
+      {
+        "run_id": "2026-05-19T003907-single-plc-provoke_on-i4",
+        "manifested": true,
+        "trigger_max": 1874,
+        "trigger_first_ts_ns": 1779151261101162922,
+        "run_start_ns": 1779151260494473267
+      },
+      {
+        "run_id": "2026-05-19T004435-single-plc-provoke_on-i5",
+        "manifested": true,
+        "trigger_max": 1872,
+        "trigger_first_ts_ns": 1779151588977223310,
+        "run_start_ns": 1779151588398833789
+      },
+      {
+        "run_id": "2026-05-19T005002-single-plc-provoke_on-i6",
+        "manifested": true,
+        "trigger_max": 1872,
+        "trigger_first_ts_ns": 1779151916851555842,
+        "run_start_ns": 1779151916234319070
+      },
+      {
+        "run_id": "2026-05-19T005532-single-plc-provoke_on-i7",
+        "manifested": true,
+        "trigger_max": 1869,
+        "trigger_first_ts_ns": 1779152247866837511,
+        "run_start_ns": 1779152247260098889
+      },
+      {
+        "run_id": "2026-05-19T010104-single-plc-provoke_on-i8",
+        "manifested": true,
+        "trigger_max": 1870,
+        "trigger_first_ts_ns": 1779152579301403030,
+        "run_start_ns": 1779152578797403195
+      },
+      {
+        "run_id": "2026-05-19T010633-single-plc-provoke_on-i9",
+        "manifested": true,
+        "trigger_max": 1873,
+        "trigger_first_ts_ns": 1779152907739862912,
+        "run_start_ns": 1779152907220433269
+      },
+      {
+        "run_id": "2026-05-19T011202-single-plc-provoke_on-i10",
+        "manifested": true,
+        "trigger_max": 1872,
+        "trigger_first_ts_ns": 1779153236466408229,
+        "run_start_ns": 1779153235869631074
+      },
+      {
+        "run_id": "2026-05-19T011729-single-plc-provoke_on-i11",
+        "manifested": true,
+        "trigger_max": 1874,
+        "trigger_first_ts_ns": 1779153563336874322,
+        "run_start_ns": 1779153562781545503
+      },
+      {
+        "run_id": "2026-05-19T012256-single-plc-provoke_on-i12",
+        "manifested": true,
+        "trigger_max": 1873,
+        "trigger_first_ts_ns": 1779153890129121339,
+        "run_start_ns": 1779153889533267618
+      },
+      {
+        "run_id": "2026-05-19T012824-single-plc-provoke_on-i13",
+        "manifested": true,
+        "trigger_max": 1873,
+        "trigger_first_ts_ns": 1779154217895337816,
+        "run_start_ns": 1779154217315791729
+      },
+      {
+        "run_id": "2026-05-19T013352-single-plc-provoke_on-i14",
+        "manifested": true,
+        "trigger_max": 1874,
+        "trigger_first_ts_ns": 1779154545495128249,
+        "run_start_ns": 1779154545018434590
+      },
+      {
+        "run_id": "2026-05-19T013919-single-plc-provoke_on-i15",
+        "manifested": true,
+        "trigger_max": 1873,
+        "trigger_first_ts_ns": 1779154873399033074,
+        "run_start_ns": 1779154872848554338
+      },
+      {
+        "run_id": "2026-05-19T014448-single-plc-provoke_on-i16",
+        "manifested": true,
+        "trigger_max": 1873,
+        "trigger_first_ts_ns": 1779155201715466554,
+        "run_start_ns": 1779155201129738642
+      },
+      {
+        "run_id": "2026-05-19T015016-single-plc-provoke_on-i17",
+        "manifested": true,
+        "trigger_max": 1871,
+        "trigger_first_ts_ns": 1779155530608985037,
+        "run_start_ns": 1779155530040731183
+      },
+      {
+        "run_id": "2026-05-19T015543-single-plc-provoke_on-i18",
+        "manifested": true,
+        "trigger_max": 1872,
+        "trigger_first_ts_ns": 1779155858013737539,
+        "run_start_ns": 1779155857471362461
+      },
+      {
+        "run_id": "2026-05-19T020111-single-plc-provoke_on-i19",
+        "manifested": true,
+        "trigger_max": 1873,
+        "trigger_first_ts_ns": 1779156185127341231,
+        "run_start_ns": 1779156184547313819
+      },
+      {
+        "run_id": "2026-05-19T020639-single-plc-provoke_on-i20",
+        "manifested": true,
+        "trigger_max": 1873,
+        "trigger_first_ts_ns": 1779156514003188144,
+        "run_start_ns": 1779156513451416233
+      }
+    ]
+  }
+}

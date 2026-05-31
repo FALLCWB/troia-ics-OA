@@ -1,0 +1,135 @@
+name: troia-ics
+
+networks:
+  troia-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+
+services:
+  plc:
+    build:
+      context: ./containers/plc
+    container_name: troia-plc
+    hostname: plc
+    networks:
+      troia-net:
+        ipv4_address: 172.30.0.10
+    ports:
+      - "8080:8080"   # OpenPLC web UI
+      - "502:502"     # Modbus/TCP
+    volumes:
+      - plc-data:/opt/openplc/webserver
+    restart: unless-stopped
+    healthcheck:
+      # Web UI healthy = OpenPLC up. Modbus :502 only starts after the PLC
+      # runtime is started (load tank_pid.st via UI, click Start PLC). The
+      # auto-bootstrap script tries this on every boot but tolerates failure
+      # for upstream UI changes; see containers/plc/README.md for manual steps.
+      test: ["CMD-SHELL", "curl -sf -o /dev/null http://127.0.0.1:8080/login || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+
+  # SCADA-LTS upstream image expects hostname 'database' + root/root creds
+  # (see /usr/local/tomcat/webapps/Scada-LTS/META-INF/context.xml in the image).
+  database:
+    # Pinned digest captured 2026-05-18; see VERSIONS.md for refresh procedure.
+    image: mysql:5.7@sha256:4bc6bc963e6d8443453676cae56536f4b8156d78bae03c0145cbe47c2aad73bb
+    container_name: troia-hmi-db
+    hostname: database
+    networks:
+      troia-net:
+        ipv4_address: 172.30.0.50
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: scadalts
+    volumes:
+      - hmi-db-data:/var/lib/mysql
+    command: ["--character-set-server=utf8", "--collation-server=utf8_general_ci"]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-proot"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  hmi:
+    build:
+      context: ./containers/hmi
+    container_name: troia-hmi
+    hostname: hmi
+    networks:
+      troia-net:
+        ipv4_address: 172.30.0.20
+    ports:
+      - "8081:8080"   # SCADA-LTS web UI (mapped to 8081 to avoid clash with PLC)
+    depends_on:
+      plc:
+        condition: service_healthy
+      database:
+        condition: service_healthy
+    restart: unless-stopped
+
+  attacker:
+    build:
+      context: .
+      dockerfile: containers/attacker/Dockerfile
+    container_name: troia-attacker
+    # Share the HMI's network namespace, so attacker traffic enters the bridge
+    # from the HMI's veth interface — this models a tampered-HMI-on-the-supply
+    # chain that emits malicious Modbus PDUs as part of its normal operation,
+    # rather than a separate external attacker who would not exist in a real
+    # post-deployment scenario. (See §IV.A of the paper.)
+    network_mode: "service:hmi"
+    volumes:
+      - ./avaliacao:/opt/troia/avaliacao
+      # Docker socket lets the mutate scenario request a runtime restart of
+      # the PLC container, simulating a dormant payload that triggers a
+      # watchdog-style reset. No SYS_PTRACE or gdb is required.
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      hmi:
+        condition: service_started
+    restart: "no"
+
+  tcpdump:
+    build:
+      context: .
+      dockerfile: containers/tcpdump/Dockerfile
+    container_name: troia-tcpdump
+    # Share the PLC's network namespace so tcpdump can see every Modbus PDU
+    # arriving on the PLC's veth interface — including attacker->plc and
+    # hmi->plc traffic, which is invisible from a container with its own
+    # isolated bridge address.
+    network_mode: "service:plc"
+    volumes:
+      - ./avaliacao:/opt/troia/avaliacao
+    depends_on:
+      plc:
+        condition: service_healthy
+    restart: unless-stopped
+
+  monitor:
+    build:
+      context: .
+      dockerfile: containers/monitor/Dockerfile
+    container_name: troia-monitor
+    hostname: monitor
+    networks:
+      troia-net:
+        ipv4_address: 172.30.0.40
+    cap_add:
+      - NET_ADMIN     # pcap on bridge
+    volumes:
+      - ./avaliacao:/opt/troia/avaliacao
+      - /var/run/docker.sock:/var/run/docker.sock  # for availability metric
+    depends_on:
+      plc:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  plc-data:
+  hmi-db-data:

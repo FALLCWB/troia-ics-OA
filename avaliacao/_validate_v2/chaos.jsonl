@@ -1,0 +1,5 @@
+{"ts_ns": 1779118144505465355, "kind": "malformed_start", "scenario": "malformed", "target": "plc:502", "count": 3}
+{"ts_ns": 1779118144532950392, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "write_negative_via_underflow", "byte_len": 12, "seq": 0}
+{"ts_ns": 1779118146036132023, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "length_mismatch", "byte_len": 12, "seq": 1}
+{"ts_ns": 1779118147066666961, "kind": "malformed_pdu", "scenario": "malformed", "payload_name": "fc127_reserved", "byte_len": 12, "seq": 2}
+{"ts_ns": 1779118145591483582, "kind": "malformed_end", "scenario": "malformed", "count": 3}

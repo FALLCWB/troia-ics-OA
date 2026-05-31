@@ -1,0 +1,16 @@
+{
+  "troia-plc": {
+    "name": "troia-plc",
+    "n_samples": 178,
+    "uptime_pct": 100.0,
+    "restarts_during_run": 0,
+    "distinct_pids": 1
+  },
+  "troia-hmi": {
+    "name": "troia-hmi",
+    "n_samples": 178,
+    "uptime_pct": 100.0,
+    "restarts_during_run": 0,
+    "distinct_pids": 1
+  }
+}

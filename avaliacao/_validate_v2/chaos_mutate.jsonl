@@ -1,0 +1,2 @@
+{"ts_ns": 1779118206315907075, "kind": "mutate_start", "scenario": "mutate", "target": "troia-plc", "mechanism": "docker_restart"}
+{"ts_ns": 1779118209717092388, "kind": "mutate_done", "scenario": "mutate", "target": "troia-plc", "mechanism": "docker_restart", "rc": 0, "stderr_tail": ""}

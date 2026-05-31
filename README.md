@@ -1,5 +1,9 @@
 # troia-ics
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20469770.svg)](https://doi.org/10.5281/zenodo.20469770)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Data License: CC BY 4.0](https://img.shields.io/badge/Data-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 A reproducible, container-based ICS testbed for **pre-deployment provocation** of dormant supply-chain triggers, with multi-channel observability and Isolation-Forest-based anomaly detection. Backing repository for the IEEE Access manuscript *"Pre-Deployment Provocation of Dormant Supply-Chain Triggers in Industrial Control Systems: A Reproducible Container Framework with Multi-Channel Observability."*
 
 ## Why this exists
@@ -162,10 +166,32 @@ troia-ics/
 
 ## Citing
 
-If you use this testbed, please cite the paper (to appear, IEEE Access 2026 — submission in progress).
+Cite the dataset as:
+
+> F. A. L. Lemos, F. M. Priotto, E. Oroski, R. A. de Faria, and P. C. Pellanda (2026). *troia-ics: Provocation Testing for Dormant Supply-Chain Triggers in Industrial Control Systems — code and dataset* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.20469770
+
+BibTeX:
+
+```bibtex
+@dataset{lemos2026troiadataset,
+  author       = {Lemos, Filipe Augusto da Luz and
+                  Priotto, Felipe Messias and
+                  Oroski, Elder and
+                  de Faria, Rubens Alexandre and
+                  Pellanda, Paulo C{\'e}sar},
+  title        = {{troia-ics: Provocation Testing for Dormant Supply-Chain
+                   Triggers in Industrial Control Systems --- code and dataset}},
+  month        = may,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.20469770},
+  url          = {https://doi.org/10.5281/zenodo.20469770}
+}
+```
+
+The IEEE Access manuscript is in submission; this section will be updated with the journal citation upon publication.
 
 ## License
 
-Apache 2.0 (see `LICENSE`).
-
-The repository is private during the manuscript review and will be made public upon acceptance.
+Code: Apache 2.0 (see `LICENSE`). Data: CC BY 4.0.

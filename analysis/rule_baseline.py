@@ -77,6 +77,12 @@ def score_run_with_rules(run_dir: Path, window_sec: float, baseline_sec: float,
     if not baseline:
         return None
 
+    # A run with no window after the warm-up period cannot produce a flag, so it
+    # would always score F1 = 0 and would enter the per-scenario mean as a spurious
+    # missed detection. Skip it for the same reason an empty directory is skipped.
+    if not any(w.window_end_ns > baseline_end_ns for w in windows):
+        return None
+
     base_arr = np.array(baseline, dtype=float)
     base_mean = base_arr.mean(axis=0)
     base_std = base_arr.std(axis=0)

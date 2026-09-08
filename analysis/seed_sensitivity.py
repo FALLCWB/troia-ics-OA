@@ -65,6 +65,11 @@ def score_run_with_seed(run_dir: Path, seed: int, window_sec: float,
     if len(baseline) < 3:
         return None
 
+    # No window after the warm-up period means nothing can ever be flagged; such a
+    # run would enter the mean as a spurious zero.
+    if not any(w.window_end_ns > baseline_end_ns for w in windows):
+        return None
+
     scaler = StandardScaler()
     X_base = scaler.fit_transform(np.array(baseline, dtype=float))
     X_all = scaler.transform(np.array([w.features for w in windows], dtype=float))

@@ -1,5 +1,5 @@
 scenario,n_observations,n_seeds,f1_mean_over_seeds,f1_std_over_seeds
-baseline,140,10,0.0,0.0
+baseline,100,10,0.0,0.0
 malformed,100,10,0.7924,0.1007
 mutate,100,10,0.2847,0.3064
-replay,110,10,0.2327,0.0783
+replay,100,10,0.2559,0.0281

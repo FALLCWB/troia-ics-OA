@@ -53,12 +53,16 @@ The top-level `Makefile` exposes six reproducibility targets ordered by cost:
 |--------------------------------------|---------------|-------------------------------------------------------------|
 | `make smoke-test`                    | < 5 min       | Testbed sanity check                                        |
 | `make reproduce-verify`              | < 10 min      | Smoke + 1 baseline run                                      |
-| `make reproduce-table-2`             | ~ 8 min       | 8 runs reproducing Table II                                 |
-| `make reproduce-killer-demo-class1`  | ~ 3 h         | 40 runs — Class 1 only (original pre-reg) + z-test          |
-| `make reproduce-killer-demo`         | ~ 9 h         | ~120 runs — Classes 1+2+3 + per-class z-test                |
+| `make reproduce-table-3-lite`        | ~ 8 min       | 8 runs reproducing Table III                                |
+| `make reproduce-binary-separation-class1` | ~ 3 h    | 40 runs — Class 1 only (original pre-reg) + z-test          |
+| `make reproduce-binary-separation-all` | ~ 9 h       | 104 runs — Classes 1+2+3 + per-class z-test                 |
 | `make reproduce-full`                | ~ 10 CPU-h    | All 40 main runs + ablation + CV + 3σ rule                  |
 
-Requirements: Docker Engine 24+, ~15 GB free disk for pcap captures, 2 GB RAM. The killer demo re-runs the pre-registered binary-separation experiment described in `analysis/killer_demo_preregistration.md`.
+The former target names (`reproduce-table-2`, `reproduce-killer-demo-class1`, `reproduce-killer-demo`) are kept as aliases.
+
+Requirements: Docker Engine 24+, ~15 GB free disk for pcap captures, 2 GB RAM. The binary-separation targets re-run the pre-registered experiment described in `analysis/killer_demo_preregistration.md`.
+
+**Scope of the data in this repository.** `avaliacao/` carries the per-run record of the 40 main-matrix runs and every aggregated CSV/JSON summary. The per-run record of the 104 binary-separation runs (Classes 1-3) is 225 MB and is distributed through the Zenodo deposit rather than through git; the aggregated results for those runs are in `avaliacao/killer_demo_summary.json` and `avaliacao/killer_demo_summary_all3.json`.
 
 ## Architecture
 

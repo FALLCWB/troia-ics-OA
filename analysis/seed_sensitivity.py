@@ -53,15 +53,17 @@ def _load_events(path: Path) -> list[dict]:
 
 
 def score_run_with_seed(run_dir: Path, seed: int, window_sec: float,
-                        baseline_sec: float, tolerance_sec: float) -> float:
+                        baseline_sec: float, tolerance_sec: float) -> float | None:
     windows = build_windows(run_dir, window_sec=window_sec)
     if not windows:
-        return 0.0
+        # Aborted run: no collector output. Skipped rather than scored as 0.0,
+        # which would enter the per-scenario mean as a spurious missed detection.
+        return None
     run_start = windows[0].window_start_ns
     baseline_end_ns = run_start + int(baseline_sec * 1_000_000_000)
     baseline = [w.features for w in windows if w.window_end_ns <= baseline_end_ns]
     if len(baseline) < 3:
-        return 0.0
+        return None
 
     scaler = StandardScaler()
     X_base = scaler.fit_transform(np.array(baseline, dtype=float))
@@ -102,6 +104,9 @@ def main() -> int:
         # Per run, average F1 across seeds.
         f1s = [score_run_with_seed(entry, s, args.window_sec, args.baseline_sec, args.tolerance_sec)
                for s in args.seeds]
+        f1s = [f for f in f1s if f is not None]
+        if not f1s:
+            continue
         by_scen[m.group("scenario")].extend(f1s)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)

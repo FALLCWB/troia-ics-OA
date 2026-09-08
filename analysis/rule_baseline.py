@@ -62,19 +62,20 @@ def _load_events(path: Path) -> list[dict]:
 
 
 def score_run_with_rules(run_dir: Path, window_sec: float, baseline_sec: float,
-                         k_sigma: float, tolerance_sec: float) -> dict:
+                         k_sigma: float, tolerance_sec: float) -> dict | None:
     """Score a single run with a threshold rule, return confusion-matrix dict."""
     windows = build_windows(run_dir, window_sec=window_sec)
     if not windows:
-        return {"tp": 0, "fp": 0, "fn": 0, "tn": 0,
-                "precision": 0.0, "recall": 0.0, "f1": 0.0, "fpr": 0.0}
+        # Aborted run: no collector output at all. Returning a zero-filled row
+        # here would enter the per-scenario mean as a spurious missed detection,
+        # so the run is skipped instead.
+        return None
 
     run_start = windows[0].window_start_ns
     baseline_end_ns = run_start + int(baseline_sec * 1_000_000_000)
     baseline = [w.features for w in windows if w.window_end_ns <= baseline_end_ns]
     if not baseline:
-        return {"tp": 0, "fp": 0, "fn": 0, "tn": 0,
-                "precision": 0.0, "recall": 0.0, "f1": 0.0, "fpr": 0.0}
+        return None
 
     base_arr = np.array(baseline, dtype=float)
     base_mean = base_arr.mean(axis=0)
@@ -143,6 +144,8 @@ def main() -> int:
             k_sigma=args.k_sigma,
             tolerance_sec=args.tolerance_sec,
         )
+        if metrics is None:
+            continue
         by_scen[m.group("scenario")].append(metrics)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)

@@ -40,7 +40,7 @@ log "step 1/5 — docker compose up -d --build"
 docker compose up -d --build >/dev/null
 
 # --- Step 2: wait for PLC health ---
-log "step 2/5 — waiting for plc health (Modbus 502)"
+log "step 2/5 — waiting for plc health (OpenPLC web UI on :8080)"
 for i in $(seq 1 18); do
   if [[ "$(docker inspect -f '{{.State.Health.Status}}' troia-plc 2>/dev/null)" == "healthy" ]]; then
     pass "plc healthy after ${i}x5s"
@@ -63,26 +63,50 @@ for i in $(seq 1 48); do
   [[ "$i" -eq 48 ]] && fail "hmi never served HTTP in 240s"
 done
 
-# --- Step 4: monitor sees PLC pid ---
-log "step 4/5 — monitor sees /host/proc/{plc_pid}/maps"
-PLC_PID=$(docker compose exec -T monitor sh -c \
-  "ps -eo pid,comm | awk '/openplc/ {print \$1; exit}'" 2>/dev/null || true)
-if [[ -z "${PLC_PID:-}" ]]; then
-  fail "monitor did not find an 'openplc' process under /host/proc"
+# --- Step 4: availability channel reachable from the monitor ---
+# The monitor observes container lifecycle through the Docker daemon socket, which
+# is the only host interface it holds. It has no shared PID namespace, no ptrace
+# and no host root, so it cannot and must not inspect PLC process memory; the
+# availability channel is defined entirely in terms of container state.
+log "step 4/5 — availability channel: monitor reads PLC container state via the Docker socket"
+AVAIL=$(docker compose exec -T monitor python3 -c "
+import docker
+c = docker.from_env()
+k = c.containers.get('troia-plc')
+print(k.status)
+" 2>/dev/null | tr -d '\r' || true)
+if [[ "${AVAIL:-}" != "running" ]]; then
+  fail "monitor could not read troia-plc state through the Docker socket (got: '${AVAIL:-<none>}')"
 fi
-if docker compose exec -T monitor sh -c "test -r /host/proc/${PLC_PID}/maps"; then
-  pass "monitor can read /host/proc/${PLC_PID}/maps (pid=${PLC_PID})"
-else
-  fail "monitor cannot read /host/proc/${PLC_PID}/maps"
+pass "availability channel live (troia-plc state='${AVAIL}')"
+
+# The monitor must NOT be able to see host processes: that would contradict the
+# privilege model stated in the article. Assert the absence explicitly.
+if docker compose exec -T monitor sh -c "test -e /host/proc" 2>/dev/null; then
+  fail "monitor has /host/proc mounted; the documented privilege model forbids it"
 fi
+pass "privilege model holds (monitor has no host /proc, no shared PID namespace)"
 
 # --- Step 5: PV oscillates around setpoint ---
 log "step 5/5 — PID running, PV reaches steady state in <=60s (skipped if Modbus 502 not up)"
 # Modbus :502 only listens after the OpenPLC program is loaded + started via
 # the web UI; if it isn't, skip this step rather than fail.
-if ! docker compose exec -T monitor bash -c "echo > /dev/tcp/plc/502" 2>/dev/null; then
-  log "WARN: Modbus :502 not reachable; tank_pid.st likely not loaded — see containers/plc/README.md for manual upload"
-  pass "smoke test complete (PV check skipped — load tank_pid.st via UI to enable it)"
+# containers/plc/bootstrap.sh loads, compiles and starts tank_pid.st after the
+# web UI is up, so :502 appears later than the container healthcheck. Wait for it
+# instead of probing once, which used to skip this step on a cold start and print
+# a misleading instruction to upload the program by hand.
+MODBUS_UP=0
+for i in $(seq 1 24); do
+  if docker compose exec -T monitor bash -c "echo > /dev/tcp/plc/502" 2>/dev/null; then
+    MODBUS_UP=1
+    log "  Modbus :502 reachable after ${i}x5s"
+    break
+  fi
+  sleep 5
+done
+if [[ "$MODBUS_UP" -eq 0 ]]; then
+  log "WARN: Modbus :502 not reachable after 120s; tank_pid.st was not loaded — see containers/plc/README.md"
+  pass "smoke test complete (PV check skipped)"
   exit 0
 fi
 # Bring the system to a known state, then check that PV stops moving.

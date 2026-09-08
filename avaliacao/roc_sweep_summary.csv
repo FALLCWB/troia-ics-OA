@@ -1,0 +1,5 @@
+scenario,n_windows,n_attack,auroc,auprc
+baseline,504,0,,
+malformed,505,285,0.746,0.75
+mutate,167,17,0.406,0.085
+replay,337,40,0.62,0.175

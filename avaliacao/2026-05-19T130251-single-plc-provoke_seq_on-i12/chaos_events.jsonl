@@ -1,0 +1,2 @@
+{"ts_ns": 1779195890755925448, "kind": "provoke_seq_on_start", "scenario": "provoke_seq_on", "target": "plc:502", "pattern": [50, 100, 150, 200, 250], "hold_sec": 180}
+{"ts_ns": 1779196071885022509, "kind": "provoke_seq_on_end", "scenario": "provoke_seq_on", "duration_sec": 180, "cycles": 113}

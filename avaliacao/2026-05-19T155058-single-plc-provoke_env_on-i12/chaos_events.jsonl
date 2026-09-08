@@ -1,0 +1,3 @@
+{"ts_ns": 1779205978598470523, "kind": "provoke_env_on_start", "scenario": "provoke_env_on", "target": "plc:502", "setpoint_low": 120, "hold_sec": 180}
+{"ts_ns": 1779205978639259914, "kind": "provoke_env_setpoint_set", "scenario": "provoke_env_on", "sp": 120}
+{"ts_ns": 1779206158684586480, "kind": "provoke_env_on_end", "scenario": "provoke_env_on", "duration_sec": 180}

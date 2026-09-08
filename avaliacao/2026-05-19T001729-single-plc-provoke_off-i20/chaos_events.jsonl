@@ -1,0 +1,2 @@
+{"ts_ns": 1779149965485166957, "kind": "provoke_off_start", "scenario": "provoke_off", "note": "no context reconstruction; trigger remains dormant"}
+{"ts_ns": 1779150130614369982, "kind": "provoke_off_end", "scenario": "provoke_off", "duration_sec": 180}

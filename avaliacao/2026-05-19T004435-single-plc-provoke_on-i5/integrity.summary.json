@@ -1,0 +1,17 @@
+{
+  "n_samples": 2650,
+  "n_missed_reads": 0,
+  "n_after_warmup": 2551,
+  "rms_deviation": 151.42,
+  "max_abs_deviation": 597,
+  "alarms_triggered": 6,
+  "safety_tripped": false,
+  "distinct_setpoints": [
+    500,
+    950
+  ],
+  "trigger_fired_max": 1872,
+  "trigger_fired_first_ts_ns": 1779151588977223310,
+  "manifested": true,
+  "unsafe": true
+}

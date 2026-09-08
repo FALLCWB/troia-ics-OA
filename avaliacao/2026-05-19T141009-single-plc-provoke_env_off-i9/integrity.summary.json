@@ -1,0 +1,23 @@
+{
+  "n_samples": 2677,
+  "n_missed_reads": 1,
+  "n_after_warmup": 2577,
+  "rms_deviation": 147.0,
+  "max_abs_deviation": 147,
+  "alarms_triggered": 0,
+  "safety_tripped": false,
+  "distinct_setpoints": [
+    500
+  ],
+  "trigger_fired_max": 0,
+  "trigger_fired_first_ts_ns": 0,
+  "trigger_seq_fired_max": 0,
+  "trigger_seq_fired_first_ts_ns": 0,
+  "trigger_env_fired_max": 0,
+  "trigger_env_fired_first_ts_ns": 0,
+  "manifested": false,
+  "manifested_data": false,
+  "manifested_seq": false,
+  "manifested_env": false,
+  "unsafe": false
+}

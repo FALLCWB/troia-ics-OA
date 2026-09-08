@@ -1,0 +1,2 @@
+{"ts_ns": 1779187475538239459, "kind": "provoke_seq_off_start", "scenario": "provoke_seq_off", "note": "no sequence reconstruction; Class 2 trigger remains dormant"}
+{"ts_ns": 1779187655538643083, "kind": "provoke_seq_off_end", "scenario": "provoke_seq_off", "duration_sec": 180}

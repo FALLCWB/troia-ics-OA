@@ -1,0 +1,2 @@
+{"ts_ns": 1779197577451258325, "kind": "provoke_env_off_start", "scenario": "provoke_env_off", "note": "setpoint untouched; PV stays at ~350; Class 3 trigger dormant"}
+{"ts_ns": 1779197757451660212, "kind": "provoke_env_off_end", "scenario": "provoke_env_off", "duration_sec": 180}

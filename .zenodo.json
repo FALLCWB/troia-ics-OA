@@ -44,10 +44,7 @@
     "hardware trojans",
     "reproducible research"
   ],
-  "license": {
-    "code": "Apache-2.0",
-    "data": "CC-BY-4.0"
-  },
+  "license": "Apache-2.0",
   "related_identifiers": [
     {
       "identifier": "https://github.com/FALLCWB/troia-ics-OA",
@@ -60,5 +57,5 @@
   ],
   "language": "eng",
   "access_right": "open",
-  "upload_type": "dataset"
+  "upload_type": "software"
 }

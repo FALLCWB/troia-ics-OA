@@ -182,6 +182,7 @@ The DOI above is the **concept DOI**: it always resolves to the current version.
 | v1.1.0 | adds the per-run record of the 104 binary-separation runs; corrects the reproduction target names, the smoke test and two analysis scripts |
 | v1.2.0 | adds `PROVENANCE.md`, `analysis/EXTERNAL-DATASET-TABLE7.md` and 32 regression tests |
 | v1.2.1 | same content, with this citation block corrected to the concept DOI and the full author list |
+| v1.2.2 | same content, with `.zenodo.json` renamed so Zenodo applies the deposit metadata; v1.2.0 and v1.2.1 were never archived, their webhook deliveries timed out during a Zenodo outage |
 
 BibTeX:
 

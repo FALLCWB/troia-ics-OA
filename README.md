@@ -181,6 +181,7 @@ The DOI above is the **concept DOI**: it always resolves to the current version.
 | v1.0.0 | initial public release for the IEEE Access submission |
 | v1.1.0 | adds the per-run record of the 104 binary-separation runs; corrects the reproduction target names, the smoke test and two analysis scripts |
 | v1.2.0 | adds `PROVENANCE.md`, `analysis/EXTERNAL-DATASET-TABLE7.md` and 32 regression tests |
+| v1.2.1 | same content, with this citation block corrected to the concept DOI and the full author list |
 
 BibTeX:
 

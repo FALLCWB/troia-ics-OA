@@ -12,21 +12,29 @@
 #   Class 1 (data-conditioned):        provoke_off / provoke_on          — original
 #   Class 2 (sequence-conditioned):    provoke_seq_off / provoke_seq_on  — new
 #   Class 3 (environment-conditioned): provoke_env_off / provoke_env_on  — new
-# As executed and reported: Class 1 n=20 per arm (40 runs); Classes 2 and 3
-# n=16 per arm (32 runs each). Total 104 runs. The smaller n for the two
-# exploratory classes kept the amendment inside a single overnight window.
+# This target reproduces the ANALYSIS the article reports, not the historical
+# record. Class 1 runs 20 per arm (40 runs); Classes 2 and 3 run 15 per arm
+# (30 runs each), which is the size the 2026-05-19 amendment registers. Total
+# 100 runs, about 8.5 h.
+#
+# The deposited historical record holds 104 binary-separation runs. The extra
+# four are a one-iteration smoke sweep of the Class 2 and 3 arms that ran on
+# 2026-05-19 between 10:14 and 10:31, before the amendment was filed. They are
+# published for transparency and excluded from the reported analysis. A fresh
+# execution cannot re-create "a run that happened before the amendment", so this
+# script does not try to: it produces the registered batch only.
 #
 # Order is fixed per pre-reg convention: control arm before treatment arm
 # within each class, classes run in order 1 → 2 → 3.
 #
 # N_PER_ARM  overrides the Class 1 arm size (default 20).
-# N_PER_ARM_EXPLORATORY overrides Classes 2 and 3 (default 16).
+# N_PER_ARM_EXPLORATORY overrides Classes 2 and 3 (default 15, the registered size).
 set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
 N_PER_ARM="${N_PER_ARM:-20}"
-N_PER_ARM_EXPLORATORY="${N_PER_ARM_EXPLORATORY:-16}"
+N_PER_ARM_EXPLORATORY="${N_PER_ARM_EXPLORATORY:-15}"
 
 # --- Class 1: data-conditioned (original pre-registered experiment) ---
 echo "[killer-demo] $(date -u +%FT%TZ) Class 1 — control arm (provoke_off, n=${N_PER_ARM})"

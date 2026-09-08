@@ -23,7 +23,8 @@ help:
 	@echo "  make reproduce-verify            smoke + 1 baseline run to check detector"
 	@echo "  make reproduce-table-3-lite      8 runs subset producing Table III (~8 min)"
 	@echo "  make reproduce-binary-separation-all"
-	@echo "                                   104 runs — Classes 1+2+3 (~9 h)"
+	@echo "                                   100 runs — Classes 1+2+3 at the reported"
+	@echo "                                   arm sizes (~8.5 h)"
 	@echo "  make reproduce-binary-separation-class1"
 	@echo "                                   40 runs — Class 1 only (original pre-reg, ~3 h)"
 	@echo "  make reproduce-full              all 40 main runs + analyses (~10 CPU-h)"
@@ -48,9 +49,14 @@ reproduce-table-3-lite:
 
 # reproduce-binary-separation-all: runs all three trigger classes (Class 1
 # data-conditioned, Class 2 sequence-conditioned, Class 3 environment-conditioned)
-# with the arm sizes actually reported: 20 per arm for Class 1 and 16 per arm for
-# Classes 2 and 3, i.e. 40 + 32 + 32 = 104 runs (~9 h wall time).
-# Amendment 2026-05-19 extends the original Class-1-only pre-registration.
+# at the arm sizes the article reports: 20 per arm for Class 1 and 15 per arm for
+# Classes 2 and 3, i.e. 40 + 30 + 30 = 100 runs (~8.5 h wall time).
+# Amendment 2026-05-19 extends the original Class-1-only pre-registration and
+# fixes 15 per arm for the two exploratory classes.
+#
+# The deposited record holds 104 binary-separation runs; the extra four are a
+# smoke sweep that ran before the amendment was filed and are excluded from the
+# reported analysis. A fresh execution reproduces the registered batch only.
 reproduce-binary-separation-all:
 	@./scripts/run_killer_demo.sh
 

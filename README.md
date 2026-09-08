@@ -1,6 +1,6 @@
 # troia-ics
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20469770.svg)](https://doi.org/10.5281/zenodo.20469770)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20469769.svg)](https://doi.org/10.5281/zenodo.20469769)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Data License: CC BY 4.0](https://img.shields.io/badge/Data-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -172,7 +172,15 @@ troia-ics/
 
 Cite the dataset as:
 
-> F. A. L. Lemos, F. M. Priotto, E. Oroski, R. A. de Faria, and P. C. Pellanda (2026). *troia-ics: Provocation Testing for Dormant Supply-Chain Triggers in Industrial Control Systems — code and dataset* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.20469770
+> F. A. L. Lemos, F. M. Priotto, D. do Amaral, E. Oroski, R. A. de Faria, and P. C. Pellanda (2026). *troia-ics: Provocation Testing for Dormant Supply-Chain Triggers in Industrial Control Systems — code and dataset*. Zenodo. https://doi.org/10.5281/zenodo.20469769
+
+The DOI above is the **concept DOI**: it always resolves to the current version. Per-version DOIs are listed in the Versions box of that record.
+
+| Version | What it is |
+|---|---|
+| v1.0.0 | initial public release for the IEEE Access submission |
+| v1.1.0 | adds the per-run record of the 104 binary-separation runs; corrects the reproduction target names, the smoke test and two analysis scripts |
+| v1.2.0 | adds `PROVENANCE.md`, `analysis/EXTERNAL-DATASET-TABLE7.md` and 32 regression tests |
 
 BibTeX:
 
@@ -180,17 +188,17 @@ BibTeX:
 @dataset{lemos2026troiadataset,
   author       = {Lemos, Filipe Augusto da Luz and
                   Priotto, Felipe Messias and
+                  do Amaral, Douglas and
                   Oroski, Elder and
                   de Faria, Rubens Alexandre and
                   Pellanda, Paulo C{\'e}sar},
   title        = {{troia-ics: Provocation Testing for Dormant Supply-Chain
                    Triggers in Industrial Control Systems --- code and dataset}},
-  month        = may,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v1.0.0},
-  doi          = {10.5281/zenodo.20469770},
-  url          = {https://doi.org/10.5281/zenodo.20469770}
+  doi          = {10.5281/zenodo.20469769},
+  url          = {https://doi.org/10.5281/zenodo.20469769},
+  note         = {Concept DOI; resolves to the current version}
 }
 ```
 

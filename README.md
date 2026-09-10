@@ -118,11 +118,16 @@ Expected: PLC web UI healthy in <60 s, SCADA-LTS HTTP responding in <240 s, moni
 ## Running the experimental matrix
 
 ```bash
-# Dry-run: see the 120-run plan without executing.
+# Dry-run: see the plan without executing.
 ./scripts/run_matrix.sh --dry-run
 
-# Full matrix: 3 configs × 4 scenarios × 10 iter = 120 runs, ~10 h wall time.
+# Default sweep, and the one the article reports:
+#   1 config × 4 scenarios × 10 iter = 40 runs, ~3.5 h wall time.
 ./scripts/run_matrix.sh
+
+# The dual-plc and redundant-hmi topologies are selectable but were not run for the article:
+#   3 configs × 4 scenarios × 10 iter = 120 runs, ~10 h wall time.
+./scripts/run_matrix.sh --configs single-plc,dual-plc,redundant-hmi
 ```
 
 Each run writes to `avaliacao/<YYYY-MM-DDTHHMMSS>-<config>-<scenario>-i<iter>/` containing per-channel JSONL streams (`availability.jsonl`, `integrity.jsonl`), a pcap, the chaos-event ground truth, and per-run scoring side-cars.

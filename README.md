@@ -188,6 +188,15 @@ The DOI above is the **concept DOI**: it always resolves to the current version.
 | v1.2.0 | adds `PROVENANCE.md`, `analysis/EXTERNAL-DATASET-TABLE7.md` and 32 regression tests |
 | v1.2.1 | same content, with this citation block corrected to the concept DOI and the full author list |
 | v1.2.2 | same content, with `.zenodo.json` renamed so Zenodo applies the deposit metadata; v1.2.0 and v1.2.1 were never archived, their webhook deliveries timed out during a Zenodo outage |
+| v1.3.0 | reproduction targets set to the arm sizes the article reports; not archived |
+| v1.3.1 | `.zenodo.json` `license` and `upload_type` corrected to the deposit schema; the first release Zenodo applied the metadata to, so the six authors appear on the record |
+| v1.3.2 | corrects the run-matrix commands in this README; no change to code, data or analysis output |
+| v1.3.3 | brings this table up to date; no change to code, data or analysis output |
+
+The table records what each release changed. It is not a pointer to the newest one: the concept
+DOI above always resolves to the current version, and the GitHub Releases page lists every tag.
+Code, data and analysis output have not changed since v1.2.0; every release after it corrects
+metadata or documentation.
 
 BibTeX:
 

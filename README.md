@@ -192,6 +192,7 @@ The DOI above is the **concept DOI**: it always resolves to the current version.
 | v1.3.1 | `.zenodo.json` `license` and `upload_type` corrected to the deposit schema; the first release Zenodo applied the metadata to, so the six authors appear on the record |
 | v1.3.2 | corrects the run-matrix commands in this README; no change to code, data or analysis output |
 | v1.3.3 | brings this table up to date; no change to code, data or analysis output |
+| v1.3.4 | aligns the selection-rule sentence in `analysis/EXTERNAL-DATASET-TABLE7.md` with the article, which states the rule as removing confounders rather than as attributing differences to the attack class; no change to code, data or analysis output |
 
 The table records what each release changed. It is not a pointer to the newest one: the concept
 DOI above always resolves to the current version, and the GitHub Releases page lists every tag.

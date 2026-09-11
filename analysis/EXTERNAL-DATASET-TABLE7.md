@@ -6,9 +6,9 @@ obtained from the dataset's own distribution point, the `MODBUSTCP#1` release of
 <https://github.com/tjcruz-dei/ICS_PCAPS>, archive `captures1_v2.zip`.
 
 Selection rule, applied uniformly: for each attack scenario, the one-hour capture with
-the five-minute attack period; for the reference, the one-hour clean capture. Equal
-duration and equal attack intensity make the differences between rows attributable to
-the attack class rather than to capture length.
+the five-minute attack period; for the reference, the one-hour clean capture. Using
+equal-duration captures with the same nominal attack interval removes capture length and
+attack duration as confounders and permits a like-for-like comparison across scenarios.
 
 | Scenario | File (within `captures1_v2/`) | Bytes | SHA-256 |
 |---|---|---|---|
